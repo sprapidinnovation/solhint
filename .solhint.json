@@ -1,0 +1,134 @@
+"solidity.solhintRules": {
+    /**
+        * Compiler version must be stated and follow SemVer
+        * versioning scheme
+    */
+    "compiler-version": ["error", "^0.8.0"],
+    /**
+        * Require or revert statement must have a reason string 
+        * and check that each reason string is at most N characters long
+    */
+    "reason-string": ["warn", { "maxLength": 32 }],
+    /**
+        * Explicitly mark visibility in function
+        * functions should be explicitly marked instead of reling
+        * on default
+    */
+    "func-visibility": ["warn", { "ignoreConstructors": true }],
+     /**
+        * Contract name should be in camel case
+    */
+    "contract-name-camelcase": "warn",
+    /**
+        * This needs to be discussed what should be the max 
+        * count of states to be allowed in a contract
+    */
+    "max-states-count": ["warn", 15],
+    /**
+       * Code contains empty block
+    */
+    "no-empty-blocks": "warn",
+    /**
+        * Variable "name" is unused
+    */
+    "no-unused-vars": "warn",
+    /**
+        * When fallback is not payable you will not be able to receive ethers
+        * This gives an warning for as fallback are ment to be payable
+    */
+    "payable-fallback": "warn",
+    /**
+        * Function order is incorrect.
+        * The correct format is to have constructor before functions
+    */
+    "func-order": "warn",
+    /**
+        * Use double quotes for string literals. Use " " instead of ' '
+    */
+    "quotes": ["error", "double"],
+    /**
+        * Constant name must be in capitalized SNAKE_CASE
+    */
+    "const-name-snakecase": "warn",
+    /**
+        * any event's name must be in CamelCase
+    */
+    "event-name-camelcase": "warn",
+    /**
+        * function name must be in mixedCase
+    */
+    "func-name-mixedcase": "warn",
+    /**
+        * parameter's name must be in mixedCase
+    */
+    "func-param-name-mixedcase": "warn",
+    /**
+        * modifier's name must be in mixedCase
+    */
+    "modifier-name-mixedcase": "warn",
+    /**
+        * Private variables must start with an underscore '_'
+    */
+    "private-vars-leading-underscore": "warn",
+    /**
+        * Avoid to use letters 'I', 'l', 'O' as identifiers.
+    */
+    "use-forbidden-name": "warn",
+    /**
+        * variable names should be in mixedCase
+    */
+    "var-name-mixedcase": "warn",
+    /**
+        * impots should be defined on top of the smart contract
+    */
+    "imports-on-top": "warn",
+    /**
+        * Check order of elements in file and inside each contract
+        * The order which should be followed pragma statement -> imports -> interface -> librarys -> contract
+    */
+    "ordering": "warn",
+    /**
+        * Visibility modifier must be first in list of modifiers
+        * function a() public ownable() payable {} correct
+        * function a() ownable() public payable {} wrong
+    */
+    "visibility-modifier-order": "warn",
+    /**
+        * Use "keccak256" instead of deprecated "sha3"
+    */
+    "avoid-sha3": "warn",
+    /**
+        * Use "selfdestruct" instead of deprecated "suicide".
+    */
+    "avoid-suicide": "warn",
+    /**
+        * Avoid using tx.origin instead use msg.sender
+    */
+    "avoid-tx-origin": "error",
+    /**
+        * There should be check for resukt of send cakk
+        * eg, if(x.send(55)) {}
+    */
+    "check-send-result": "warn",
+    /**
+        * Avoid multiple calls of "send" method in single transaction
+    */
+    "multiple-sends": "warn",
+    /**
+        * CFallback function must be simple
+    */
+    "no-complex-fallback": "warn",
+    /**
+        * CDo not rely on "block.blockhash". Miners can influence its value
+    */
+    "not-rely-on-block-hash": "warn",
+    /**
+        * Possible reentrancy vulnerabilities. Avoid state changes after transfer
+        * state changes should be made before any transfer
+    */
+    "reentrancy": "error",
+    /**
+        * Explicitly mark visibility of state
+    */
+    "state-visibility": "warn"
+  }

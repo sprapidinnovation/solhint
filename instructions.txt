@@ -1,0 +1,6 @@
+For using this solhint file :-
+1. Install solditiy extension in VSCode
+2. click on marketPlace option and serch for  soldity extension 
+   and click on gear icon and selecte 'extension settings'.
+3. search for the option 'Solidity; Solhint Rules' and click on edit settings
+4. replace solidity.solhintRules with this and we are good to go
